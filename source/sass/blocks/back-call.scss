@@ -1,0 +1,49 @@
+.back-call {
+  display: flex;
+  align-items: center;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.back-call__phones-list {
+  margin-right: 40px;
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.back-call__phone-item {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.back-call__phone-link {
+  font-size: 16px;
+  transition: opacity $trans-base;
+
+  @include vp-767 {
+    font-size: $fz-base;
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-base-black;
+    outline-offset: 2px;
+  }
+}

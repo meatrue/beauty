@@ -1,0 +1,40 @@
+.button {
+  display: inline-flex;
+  padding: 10px 25px 11px 24px;
+
+  @include font-parameters ($ff-base, 14px, 1.1, 400);
+
+  letter-spacing: 0.05em;
+  color: $color-base-white;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid $color-base-white;
+  border-radius: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity $trans-base;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-base-black;
+    outline-offset: 2px;
+  }
+
+  &--bordered-accent {
+    color: $color-base-black;
+    border-color: $color-accent;
+  }
+
+  &--colored-accent {
+    color: $color-base-white;
+    background-color: $color-accent;
+    border-color: $color-accent;
+  }
+}

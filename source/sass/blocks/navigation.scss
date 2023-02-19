@@ -1,0 +1,38 @@
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 30px;
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.navigation__link {
+  transition: opacity $trans-base;
+
+  @include hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-base-black;
+    outline-offset: 2px;
+  }
+}

@@ -17,58 +17,71 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__navigation">
-      <nav class="navigation wrapper">
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Доставка</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Оплата</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Отзывы</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Вопрос - ответ</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Контакты</a>
-        </div>
-      </nav>
-    </div>
+  <header class="header header--nojs">
+    <div class="header__wrapper">
+      <div class="header__navigation">
+        <nav class="navigation wrapper">
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Доставка</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Оплата</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Отзывы</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Вопрос - ответ</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Контакты</a>
+          </div>
+        </nav>
+      </div>
 
 
-    <div class="header__main">
-      <div class="header__main-wrapper wrapper">
-        <img class="header__logo" src="" alt="Интернет-магазин товаров для красоты «Beauty».">
+      <div class="header__main">
+        <div class="header__main-wrapper wrapper">
+          <a class="header__logo logo">
+            <img class="logo__image" src="./img/svg/logo.svg" width="80" height="80" alt="Интернет-магазин товаров для красоты «Beauty».">
+            <span class="logo__title">Beauty</span>
+          </a>
 
-        <div class="header__back-call back-call">
-          <a class="back-call__phone" href="tel:+78121234567">8 (812) 123-45-67</a>
-          <a class="back-call__link button button--bordered-accent" href="#">Обратный звонок</a>
+          <div class="header__back-call back-call">
+            <div class="back-call__phones-list">
+              <p class="back-call__phone-item">
+                <a class="back-call__phone-link" href="tel:+78121234567">8 (812) 123-45-67</a>
+              </p>
+            </div>
+            <a class="back-call__link button button--bordered-accent" href="#">Обратный звонок</a>
+          </div>
+
+          <button class="header__navigation-toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
         </div>
       </div>
-    </div>
 
-    <div class="header__catalog">
-      <div class="navigation wrapper">
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Парикмахерская</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Барбершоп</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Маникюр</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Педикюр</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Массаж</a>
-        </div>
-        <div class="navigation__item">
-          <a class="navigation__link" href="#">Мебель</a>
+      <div class="header__catalog">
+        <div class="navigation wrapper">
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Парикмахерская</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Барбершоп</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Маникюр</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Педикюр</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Массаж</a>
+          </div>
+          <div class="navigation__item">
+            <a class="navigation__link" href="#">Мебель</a>
+          </div>
         </div>
       </div>
     </div>
@@ -77,16 +90,23 @@
   <main>
     <h1 class="visually-hidden">Интернет-магазин товаров для красоты «Beauty».</h1>
     <section class="promo">
-      <h2 class="visually-hidden">Акции.</h2>
-      <div class="promo__info">
-        <h3 class="promo__title">Супер кресло</h3>
-        <p class="promo__text">Текст акции всегда отражает суть, а не просто
-          болтовню, поэтому внимательнее</p>
-        <a class="promo__detail-link button" href="#">Подробнее</a>
-      </div>
+      <div class="promo__wrapper wrapper">
+        <h2 class="visually-hidden">Акции.</h2>
 
-      <div class="promo__image">
-        <img src="" alt="Супер кресло.">
+        <div class="promo__info">
+          <h3 class="promo__title">Супер кресло</h3>
+          <p class="promo__text">Текст акции всегда отражает суть, а не просто
+            болтовню, поэтому внимательнее</p>
+          <a class="promo__detail-link button" href="#">Подробнее</a>
+        </div>
+
+        <div class="promo__image">
+          <picture>
+            <source type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
+
+            <img src="./img/promo.png" srcset="./img/promo@2x.png 2x" loading="lazy" width="584" height="584" alt="Супер кресло.">
+          </picture>
+        </div>
       </div>
     </section>
 
@@ -171,6 +191,7 @@
       </p>
     </div>
   </footer>
+
   <script src="./js/main.js" type="module"></script>
 </body>
 

@@ -1,0 +1,131 @@
+.promo {
+  overflow: hidden;
+  height: 31.45vw;
+  max-height: 604px;
+  padding: 0 $padding-desktop;
+  color: $color-base-white;
+  background-color: $color-accent;
+
+  @include vp-1199 {
+    min-height: 260px;
+    padding: 0 $padding-tablet;
+  }
+
+  @include vp-767 {
+    height: auto;
+    max-height: unset;
+    min-height: unset;
+    padding: 20px $padding-mobile;
+  }
+}
+
+.promo__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  height: 100%;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+.promo__info {
+  position: relative;
+  z-index: 3;
+  max-width: 325px;
+
+  @include vp-1199 {
+    max-width: 308px;
+  }
+}
+
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.16;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+    font-size: 38px;
+  }
+}
+
+.promo__text {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.promo__detail-link {
+  margin-top: 35px;
+  padding-right: 44px;
+  padding-left: 44px;
+
+  @include vp-1199 {
+    margin-top: 25px;
+  }
+}
+
+.promo__image {
+  position: relative;
+  left: -68px;
+  width: 28.54vw;
+  max-width: 548px;
+  height: 28.54vw;
+  max-height: 548px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: -46px;
+    right: -46px;
+    bottom: -46px;
+    left: -46px;
+    z-index: 2;
+    content: "";
+    background-color: $color-base-white;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+  &::after {
+    top: -138px;
+    right: -138px;
+    bottom: -138px;
+    left: -138px;
+    z-index: 1;
+    opacity: 0.3;
+  }
+
+  @include vp-1199 {
+    left: 0;
+  }
+
+  @include vp-767 {
+    justify-self: center;
+    width: 87.5vw;
+    max-width: 408px;
+    min-width: $min-content-width;
+    height: 87.5vw;
+    max-height: 408px;
+    min-height: $min-content-width;
+    margin-top: 40px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
