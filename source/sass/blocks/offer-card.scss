@@ -1,0 +1,51 @@
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px 30px;
+  text-align: center;
+  background-color: $color-base-white;
+}
+
+.offer-card__title {
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.offer-card__price {
+  margin: 0 0 20px;
+  font-size: 21px;
+  line-height: 1.17;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.offer-card__image {
+  margin: 0 auto 20px;
+  width: 100%;
+  max-width: 125px;
+  height: auto;
+  object-fit: contain;
+
+  @include vp-1199 {
+    width: calc(100% - 70px);
+    max-width: 400px;
+  }
+}
+
+.offer-card__buy {
+  padding: 9px 38px 9px 37px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+}

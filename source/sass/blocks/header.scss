@@ -13,7 +13,7 @@
 }
 
 .header__navigation {
-  padding: 17px $padding-desktop 16px;
+  padding: 12px $padding-desktop 11px;
   background-color: $color-additional;
 
   @include vp-1199 {
@@ -31,7 +31,7 @@
 }
 
 .header__catalog {
-  padding: 30px $padding-desktop;
+  padding: 25px $padding-desktop;
 
   @include vp-1199 {
     padding-right: $padding-tablet;
@@ -90,7 +90,7 @@
     }
 
     &--navigation-opened {
-      position: fixed;
+      position: absolute;
       z-index: 100;
       overflow-y: hidden;
       width: 100%;

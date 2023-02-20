@@ -1,0 +1,32 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 45px);
+  grid-gap: 20px;
+
+  @include vp-1199 {
+    justify-content: center;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid $color-accent;
+  border-radius: 50%;
+
+  @include hover {
+    border-color: $color-additional-dark;
+
+    svg {
+      fill: $color-additional-dark;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-base-black;
+    outline-offset: 2px;
+  }
+}

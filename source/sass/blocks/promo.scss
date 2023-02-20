@@ -1,13 +1,14 @@
 .promo {
   overflow: hidden;
-  height: 31.45vw;
+  height: 604px;
   max-height: 604px;
   padding: 0 $padding-desktop;
   color: $color-base-white;
   background-color: $color-accent;
 
   @include vp-1199 {
-    min-height: 260px;
+    height: 504px;
+    max-height: 504px;
     padding: 0 $padding-tablet;
   }
 
@@ -72,10 +73,8 @@
 .promo__image {
   position: relative;
   left: -68px;
-  width: 28.54vw;
-  max-width: 548px;
-  height: 28.54vw;
-  max-height: 548px;
+  width: 548px;
+  height: 548px;
 
   img {
     position: absolute;
@@ -112,6 +111,24 @@
 
   @include vp-1199 {
     left: 0;
+    width: 45.66vw;
+    height: 45.66vw;
+
+    &::before {
+      top: -36px;
+      right: -36px;
+      bottom: -36px;
+      left: -36px;
+    }
+
+    &::after {
+      top: -128px;
+      right: -128px;
+      bottom: -128px;
+      left: -128px;
+      z-index: 1;
+      opacity: 0.3;
+    }
   }
 
   @include vp-767 {
@@ -124,8 +141,21 @@
     min-height: $min-content-width;
     margin-top: 40px;
 
+
+    &::before {
+      top: -24px;
+      right: -24px;
+      bottom: -24px;
+      left: -24px;
+    }
+
     &::after {
-      display: none;
+      top: -112px;
+      right: -112px;
+      bottom: -112px;
+      left: -112px;
+      z-index: 1;
+      opacity: 0.3;
     }
   }
 }

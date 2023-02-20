@@ -1,0 +1,141 @@
+.presents-and-map {
+  padding: 20px $padding-desktop 132px;
+  background-color: $color-additional;
+
+  @include vp-1199 {
+    padding: 20px $padding-tablet 112px;
+  }
+
+  @include vp-767 {
+    padding: 20px $padding-mobile 90px;
+  }
+}
+
+.presents-and-map__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.presents-and-map__section {
+  position: relative;
+  padding: 35px 40px;
+  color: $color-base-white;
+  background-color: $color-accent;
+
+  &--presents {
+    padding-right: 235px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 45px;
+      bottom: 0;
+      margin: auto 0;
+      width: 140px;
+      height: 140px;
+      content: "";
+      background-image: url("../img/svg/email.svg");
+      background-size: cover;
+    }
+  }
+
+  &--map {
+    padding-right: 320px;
+  }
+
+  @include vp-1199 {
+    padding-right: 40px;
+    padding-top: 195px;
+
+    &--presents::after {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      left: 40px;
+      margin: 0 auto 0 0;
+      width: 140px;
+      height: 140px;
+      content: "";
+      background-image: url("../img/svg/email.svg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--presents::after {
+      position: absolute;
+      top: 35px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 140px;
+      height: 140px;
+      content: "";
+      background-image: url("../img/svg/email.svg");
+      background-size: cover;
+    }
+  }
+}
+
+.presents-and-map__title {
+  margin: 0 0 22px;
+  font-size: 18px;
+  line-height: 1.16;
+  font-weight: 700;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+
+.presents-and-map__text {
+  margin: 0 0 25px;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+
+.presents-and-map__email {
+  padding: 7px 25px;
+  color: $color-base-black;
+  background-color: $color-base-white;
+  border: 2px solid $color-base-white;
+  border-radius: 30px;
+  transition: opacity $trans-base;
+
+  @include font-parameters($ff-base, 14px, 1.16, 400);
+
+  &::placeholder {
+    font-size: 14px;
+    color: #c4c4c4;
+  }
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-base-black;
+    outline-offset: 2px;
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
+}
+
+.presents-and-map__map-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
